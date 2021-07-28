@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Montserrat&family=Open+Sans&display=swap');
+@import '~bootstrap/scss/bootstrap';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Cormorant Infant', 'Times New Roman', serif;
+}
+
+.row {
+  margin: 0 !important;
+}

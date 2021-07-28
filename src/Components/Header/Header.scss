@@ -1,0 +1,25 @@
+@import 'styles/variables';
+
+.header {
+  background-color: white;
+  border-bottom: 3px solid $primary-color;
+
+  .logo {
+    width: 80px;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    color: #1f1f1f;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover {
+      color: grey;
+    }
+  }
+
+  @media (min-width: 700px) {
+    padding: 0 72px;
+  }
+}

@@ -1,0 +1,59 @@
+.top-section {
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(https://www.bioqor.in/wp-content/uploads/2020/08/Mobile-Banner.jpg) !important;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: white;
+
+  .text-area {
+    margin: 0 32px;
+    padding: 10% 0;
+
+    max-width: 600px;
+
+    .big-text {
+      font-size: 4em;
+      line-height: 1;
+    }
+
+    @media (min-width: 700px) {
+      margin: 0 15%;
+    }
+  }
+
+  @media (min-width: 700px) {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(15, 8, 8, 0.2) 100%
+      ),
+      url(https://www.bioqor.in/wp-content/uploads/2020/08/bioqor-products-banner.jpg) !important;
+  }
+}
+
+.bottom-section {
+  .card {
+    width: 90%;
+    max-width: 1200px;
+    display: block;
+    margin: auto;
+    padding: 54px 108px;
+    text-align: center;
+    border: none;
+
+    .header-text {
+      font-size: xxx-large;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: larger;
+    }
+  }
+}

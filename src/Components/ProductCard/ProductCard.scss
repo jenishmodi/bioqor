@@ -1,0 +1,9 @@
+.product-card {
+  border: none;
+  cursor: pointer;
+  width: 120px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}

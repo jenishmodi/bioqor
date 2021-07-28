@@ -1,0 +1,35 @@
+@import 'styles/variables';
+
+.contact-us-section {
+  margin: 0 16px;
+
+  .contact-us-header {
+    margin: 24px 0;
+    font-size: xxx-large;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .description {
+    font-size: x-large;
+  }
+
+  h3 {
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 18px;
+    color: black;
+  }
+
+  .icon {
+    color: $primary-color;
+    font-size: xx-large;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 10em 16px;
+  }
+}

@@ -1,0 +1,90 @@
+@import 'styles/variables';
+
+.about-us-section {
+  margin: 0 16px;
+
+  .about-us-header {
+    font-size: xxx-large;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .description {
+    font-size: x-large;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 10em;
+  }
+}
+
+.vision-mission-section {
+  margin: 0 16px;
+
+  .description {
+    font-size: x-large;
+  }
+
+  .card {
+    padding: 32px;
+    border: none;
+
+    h4 {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: larger;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 10em;
+  }
+}
+
+.values-section {
+  margin: 0 16px;
+
+  .values-header {
+    font-size: xxx-large;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .description {
+    font-size: x-large;
+  }
+
+  .card {
+    margin: 16px;
+    padding: 32px;
+    border: none;
+
+    h4 {
+      font-weight: bold;
+    }
+
+    p {
+      font-size: larger;
+      padding-left: 46px;
+    }
+
+    .c-header {
+      font-size: x-large;
+      font-weight: bold;
+
+      .icon {
+        margin-right: 10px;
+        background-color: $primary-color;
+        padding: 2px 7px 6px 7px;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 10em;
+  }
+}
