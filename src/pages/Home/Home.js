@@ -1,10 +1,14 @@
+import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import { AppContext } from 'context/AppContext';
 import Button from 'Components/Button';
+import ProductCard from 'Components/ProductCard';
 
 import './Home.scss';
 
 const Home = () => {
   const history = useHistory();
+  const { products } = useContext(AppContext);
 
   return (
     <div>
@@ -22,6 +26,14 @@ const Home = () => {
           <div className="mt-5">
             <Button onClick={() => history.push('/about-us')}>ABOUT US</Button>
           </div>
+        </div>
+      </div>
+      <div className="my-5">
+        <h1 className="text-center">Our Products</h1>
+        <div className="mx-4 mt-5 d-flex flex-wrap align-items-center">
+          {products.slice(0, 4).map((product) => (
+            <ProductCard key={product._id} product={product} />
+          ))}
         </div>
       </div>
       <div className="bg-light bottom-section py-5">

@@ -1,14 +1,17 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: process.env.REACT_APP_API_ENDPOINT,
 });
 
 axiosInstance.interceptors.request.use((req) => {
-  if (req.url.includes('/login') || req.url.includes('/signup')) {
+  if (
+    req.url.includes('/login') ||
+    (req.method === 'GET' && req.url.includes('/products'))
+  ) {
     return req;
   }
-  // req.headers['Authorization'] = `Bearer ${getAuthTokenFromStorage()}`;
+  req.headers['Authorization'] = localStorage.getItem('token');
   return req;
 });
 
@@ -16,7 +19,7 @@ axiosInstance.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response.status === 401) {
-      // removeAuthTokenFromStorage();
+      localStorage.removeItem('token');
       window.location.reload();
     }
     return err;

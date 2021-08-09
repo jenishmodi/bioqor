@@ -9,13 +9,17 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  color: white;
-
   .text-area {
     margin: 0 32px;
     padding: 10% 0;
 
     max-width: 600px;
+
+    h4,
+    h5,
+    div {
+      color: white;
+    }
 
     .big-text {
       font-size: 4em;

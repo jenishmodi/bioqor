@@ -1,9 +1,25 @@
+@import 'styles/variables';
+
 .product-card {
   border: none;
   cursor: pointer;
-  width: 120px;
+  width: 100%;
+  max-width: 280px;
+  padding: 8px;
+  margin: 6px 18px;
+  transition: 0.3s;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+  }
+
+  img {
+    filter: drop-shadow(2px 4px 12px #6b6b6b);
+  }
+
+  p {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: $primary-color;
+    font-size: 12px;
   }
 }

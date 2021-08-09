@@ -1,9 +1,11 @@
 import { createContext, useReducer } from 'react';
 
 export const SET_PRODUCTS = 'SET_PRODUCTS';
+export const SET_ADMIN_LOGGED_IN = 'SET_ADMIN_LOGGED_IN';
 
 const initialState = {
   products: [],
+  isAdminLoggedIn: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -12,6 +14,10 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_PRODUCTS:
       updatedState.products = [...action.products];
+      return updatedState;
+
+    case SET_ADMIN_LOGGED_IN:
+      updatedState.isAdminLoggedIn = action.isLoggedIn;
       return updatedState;
 
     default:
@@ -26,11 +32,19 @@ export const setProducts = (products) => ({
   products,
 });
 
+export const setIsAdminLoggedIn = (isLoggedIn) => ({
+  type: SET_ADMIN_LOGGED_IN,
+  isLoggedIn,
+});
+
 const AppContextProvider = ({ children }) => {
-  const [{ products }, dispatch] = useReducer(reducer, initialState);
+  const [{ products, isAdminLoggedIn }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   return (
-    <AppContext.Provider value={{ products, dispatch }}>
+    <AppContext.Provider value={{ products, isAdminLoggedIn, dispatch }}>
       {children}
     </AppContext.Provider>
   );

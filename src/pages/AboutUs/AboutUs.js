@@ -1,3 +1,4 @@
+import { Col, Row } from 'react-bootstrap';
 import { GoClock } from 'react-icons/go';
 import { IoMdCheckboxOutline } from 'react-icons/io';
 import { RiCupLine } from 'react-icons/ri';
@@ -26,8 +27,8 @@ const AboutUs = () => {
             issues, we devote ourselves towards the mother nature and persevere
             to hunt the healing properties of the earth and it’s environment.
           </p>
-          <div className="row mt-5">
-            <div className="col-12 col-md-6">
+          <Row className="mt-5">
+            <Col xs={12} md={6}>
               <div className="card">
                 <h4>Vision</h4>
                 <p>
@@ -38,8 +39,8 @@ const AboutUs = () => {
                   effectiveness of conventional and herbal treatments.
                 </p>
               </div>
-            </div>
-            <div className="col-12 col-md-6">
+            </Col>
+            <Col xs={12} md={6}>
               <div className="card">
                 <h4>Mission</h4>
                 <p>
@@ -49,8 +50,8 @@ const AboutUs = () => {
                   with the most potent, reliant and safe products.
                 </p>
               </div>
-            </div>
-          </div>
+            </Col>
+          </Row>
         </section>
       </div>
       <section className="values-section py-5">
@@ -61,8 +62,8 @@ const AboutUs = () => {
             products and services:
           </p>
         </div>
-        <div className="row mt-5">
-          <div className="col-12 col-md-6">
+        <Row className="mt-5">
+          <Col xs={12} md={6}>
             <div className="card bg-light">
               <div className="c-header">
                 <span className="icon">
@@ -75,8 +76,8 @@ const AboutUs = () => {
                 ideas. Equipment and technology for the right things.
               </p>
             </div>
-          </div>
-          <div className="col-12 col-md-6">
+          </Col>
+          <Col xs={12} md={6}>
             <div className="card bg-light">
               <div className="c-header">
                 <span className="icon">
@@ -89,8 +90,8 @@ const AboutUs = () => {
                 helps to grow. Never bounce back from the responsibility.
               </p>
             </div>
-          </div>
-          <div className="col-12 col-md-6">
+          </Col>
+          <Col xs={12} md={6}>
             <div className="card bg-light">
               <div className="c-header">
                 <span className="icon">
@@ -103,8 +104,8 @@ const AboutUs = () => {
                 to be unselfish and delivering better with each day.
               </p>
             </div>
-          </div>
-          <div className="col-12 col-md-6">
+          </Col>
+          <Col xs={12} md={6}>
             <div className="card bg-light">
               <div className="c-header">
                 <span className="icon">
@@ -117,8 +118,8 @@ const AboutUs = () => {
                 best in every situation. Enthusiastically driven.
               </p>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </section>
     </div>
   );

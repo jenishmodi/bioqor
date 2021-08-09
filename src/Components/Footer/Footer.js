@@ -1,10 +1,15 @@
+import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
 import { FaFacebookF } from 'react-icons/fa';
 import { GrLinkedinOption, GrInstagram } from 'react-icons/gr';
 import { MdRssFeed } from 'react-icons/md';
+import { AppContext } from 'context/AppContext';
 
 import './Footer.scss';
 
 const Footer = () => {
+  const { products } = useContext(AppContext);
+
   return (
     <footer className="footer">
       <div className="footer-links">
@@ -21,8 +26,15 @@ const Footer = () => {
             <div className="ml-md-5">
               <h5 className="">Our Products</h5>
               <ul>
-                <li>Product 1</li>
-                <li>Product 2</li>
+                {products.slice(0, 10).map((product) => (
+                  <li key={product._id}>
+                    <NavLink
+                      to={`/products/${product.name.replaceAll(' ', '-')}`}
+                    >
+                      {product.name}
+                    </NavLink>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

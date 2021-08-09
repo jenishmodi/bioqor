@@ -13,13 +13,16 @@
     color: #1f1f1f;
     font-weight: bold;
     transition: 0.3s;
+    margin: 0 6px;
 
     &:hover {
       color: grey;
     }
   }
 
-  @media (min-width: 700px) {
-    padding: 0 72px;
+  .products-dropdown {
+    .dropdown-toggle::after {
+      vertical-align: 0.12em;
+    }
   }
 }

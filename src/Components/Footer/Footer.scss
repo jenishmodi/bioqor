@@ -6,6 +6,7 @@
 
   * {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: white;
   }
 
   a,
@@ -67,7 +68,7 @@
       font-size: 24px;
 
       &:hover {
-        color: $primary-color;
+        color: $primary-color !important;
       }
     }
 
